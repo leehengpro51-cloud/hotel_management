@@ -41,8 +41,11 @@
                         <div class="input-group">
                             <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-key"></i></span>
                             <input type="password" name="password" id="password" 
-                                   class="form-control border-start-0 @error('password') is-invalid @enderror" 
+                                   class="form-control border-start-0 border-end-0 @error('password') is-invalid @enderror" 
                                    value="lyheng123" placeholder="••••••••" required>
+                            <button class="btn btn-outline-secondary border-start-0 bg-light text-muted" type="button" id="togglePasswordBtn" title="Show or hide password">
+                                <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                            </button>
                         </div>
                         @error('password')
                             <div class="text-danger small mt-1">{{ $message }}</div>
@@ -82,3 +85,21 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.getElementById('togglePasswordBtn').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const icon = document.getElementById('togglePasswordIcon');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('bi-eye');
+            icon.classList.add('bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('bi-eye-slash');
+            icon.classList.add('bi-eye');
+        }
+    });
+</script>
+@endpush

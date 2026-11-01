@@ -56,8 +56,11 @@
                         <div class="input-group">
                             <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-key"></i></span>
                             <input type="password" name="password" id="password" 
-                                   class="form-control border-start-0 @error('password') is-invalid @enderror" 
+                                   class="form-control border-start-0 border-end-0 @error('password') is-invalid @enderror" 
                                    placeholder="••••••••" required>
+                            <button class="btn btn-outline-secondary border-start-0 bg-light text-muted" type="button" id="toggleRegPasswordBtn" title="Show or hide password">
+                                <i class="bi bi-eye" id="toggleRegPasswordIcon"></i>
+                            </button>
                         </div>
                         @error('password')
                             <div class="text-danger small mt-1">{{ $message }}</div>
@@ -70,8 +73,11 @@
                         <div class="input-group">
                             <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-shield-check"></i></span>
                             <input type="password" name="password_confirmation" id="password_confirmation" 
-                                   class="form-control border-start-0" 
+                                   class="form-control border-start-0 border-end-0" 
                                    placeholder="••••••••" required>
+                            <button class="btn btn-outline-secondary border-start-0 bg-light text-muted" type="button" id="toggleRegConfirmPasswordBtn" title="Show or hide password">
+                                <i class="bi bi-eye" id="toggleRegConfirmPasswordIcon"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -92,3 +98,26 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    function setupPasswordToggle(buttonId, inputId, iconId) {
+        document.getElementById(buttonId).addEventListener('click', function() {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+    }
+
+    setupPasswordToggle('toggleRegPasswordBtn', 'password', 'toggleRegPasswordIcon');
+    setupPasswordToggle('toggleRegConfirmPasswordBtn', 'password_confirmation', 'toggleRegConfirmPasswordIcon');
+</script>
+@endpush
