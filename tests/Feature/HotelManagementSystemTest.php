@@ -21,7 +21,7 @@ class HotelManagementSystemTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
         $response->assertSee('Login Form');
-        $response->assertSee('adminwoman@gmail.com');
+        $response->assertSee('Lyheng@gmail.com');
     }
 
     /**

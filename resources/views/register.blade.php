@@ -43,7 +43,7 @@
                             <input type="email" name="email" id="email" 
                                    class="form-control border-start-0 @error('email') is-invalid @enderror" 
                                    value="{{ old('email') }}" 
-                                   placeholder="adminwoman@gmail.com" required>
+                                   placeholder="Lyheng@gmail.com" required>
                         </div>
                         @error('email')
                             <div class="text-danger small mt-1">{{ $message }}</div>

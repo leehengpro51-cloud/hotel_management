@@ -27,8 +27,8 @@
                             <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
                             <input type="email" name="email" id="email" 
                                    class="form-control border-start-0 @error('email') is-invalid @enderror" 
-                                   value="{{ old('email', 'adminwoman@gmail.com') }}" 
-                                   placeholder="adminwoman@gmail.com" required autofocus>
+                                   value="{{ old('email', 'Lyheng@gmail.com') }}" 
+                                   placeholder="Lyheng@gmail.com" required autofocus>
                         </div>
                         @error('email')
                             <div class="text-danger small mt-1">{{ $message }}</div>
@@ -42,7 +42,7 @@
                             <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-key"></i></span>
                             <input type="password" name="password" id="password" 
                                    class="form-control border-start-0 @error('password') is-invalid @enderror" 
-                                   value="password123" placeholder="••••••••" required>
+                                   value="lyheng123" placeholder="••••••••" required>
                         </div>
                         @error('password')
                             <div class="text-danger small mt-1">{{ $message }}</div>
@@ -64,13 +64,12 @@
                         </button>
                     </div>
 
-                    <!-- Demo Accounts Hint -->
+                    <!-- Default Account Hint -->
                     <div class="p-3 rounded-3 bg-light border text-muted small mb-3">
                         <div class="fw-bold text-dark mb-1 d-flex align-items-center gap-1">
-                            <i class="bi bi-info-circle-fill text-warning"></i> Preset Exam Accounts:
+                            <i class="bi bi-info-circle-fill text-warning"></i> Default Staff Account:
                         </div>
-                        <div>Email: <code>adminwoman@gmail.com</code> | Pass: <code>password123</code></div>
-                        <div>Email: <code>admin@hotel.com</code> | Pass: <code>password123</code></div>
+                        <div>Email: <code>Lyheng@gmail.com</code> | Pass: <code>lyheng123</code></div>
                     </div>
 
                     <div class="text-center small text-muted">

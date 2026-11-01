@@ -63,13 +63,11 @@
 
 ---
 
-## 🔑 Demo Login Accounts
+## 🔑 Default Staff Account
 
-| Role | Email Address | Password |
-|------|---------------|----------|
-| **Exam Default (Slide 4/5)** | `adminwoman@gmail.com` | `password123` |
-| **General Manager** | `admin@hotel.com` | `password123` |
-| **Staff Admin** | `admin@example.com` | `password123` |
+| Role | Full Name | Email Address | Password |
+|------|-----------|---------------|----------|
+| **Hotel Administrator / Manager** | **Lyheng** | `Lyheng@gmail.com` | `lyheng123` |
 
 ---
 
