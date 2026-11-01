@@ -52,7 +52,7 @@ class HotelManagementSystemTest extends TestCase
 
         $dashResponse = $this->actingAs($user)->get(route('dashboard'));
         $dashResponse->assertStatus(200);
-        $dashResponse->assertSee('Grand Horizon');
+        $dashResponse->assertSee('Angkor Hotel');
     }
 
     /**

@@ -8,11 +8,11 @@
         <div class="card card-hotel shadow-lg border-0 overflow-hidden">
             <!-- Header Banner -->
             <div class="p-4 text-center text-white" style="background: linear-gradient(135deg, #07111E 0%, #0B192C 60%, #152B44 100%); border-bottom: 2px solid #D4AF37;">
-                <div class="d-inline-flex p-3 rounded-circle bg-warning bg-opacity-20 mb-3 border border-warning border-opacity-40">
-                    <i class="bi bi-person-plus-fill fs-2 text-warning"></i>
+                <div class="hotel-logo-wrapper mb-3" style="padding: 3px; box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel Logo" class="hotel-logo-img" style="width: 74px; height: 74px;">
                 </div>
                 <h3 class="fw-bold mb-1 font-luxury">Register Form</h3>
-                <p class="mb-0 text-light small opacity-75">Create staff account for Hotel Management System</p>
+                <p class="mb-0 text-light small opacity-75">Create staff account for Angkor Hotel Management</p>
             </div>
 
             <!-- Form Body -->

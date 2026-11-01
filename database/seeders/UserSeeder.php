@@ -13,7 +13,16 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // Admin Account 1 (matches default standard)
+        // Admin Account 1 (Angkor Hotel Manager)
+        User::firstOrCreate(
+            ['email' => 'admin@angkorhotel.com'],
+            [
+                'name' => 'Angkor General Manager',
+                'password' => Hash::make('password123'),
+                'email_verified_at' => now(),
+            ]
+        );
+
         User::firstOrCreate(
             ['email' => 'admin@hotel.com'],
             [

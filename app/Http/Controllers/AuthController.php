@@ -39,7 +39,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             return redirect()->intended(route('dashboard'))
-                ->with('success', 'Welcome back, ' . Auth::user()->name . '! Logged in to Grand Horizon Hotel.');
+                ->with('success', 'Welcome back, ' . Auth::user()->name . '! Logged in to Angkor Hotel.');
         }
 
         return back()->withErrors([
@@ -80,7 +80,7 @@ class AuthController extends Controller
         $request->session()->regenerate();
 
         return redirect()->route('dashboard')
-            ->with('success', 'Staff account created successfully! Welcome to Grand Horizon Hotel.');
+            ->with('success', 'Staff account created successfully! Welcome to Angkor Hotel.');
     }
 
     /**

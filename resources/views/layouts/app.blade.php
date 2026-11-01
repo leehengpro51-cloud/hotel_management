@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Hotel Management System') - Grand Horizon Luxury Hotel</title>
+    <title>@yield('title', 'Hotel Management System') - Angkor Hotel</title>
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/logo.jpg') }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +42,29 @@
 
         .font-luxury {
             font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .hotel-logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            border: 2px solid var(--brand-gold);
+            border-radius: 50%;
+            background: #0B192C;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hotel-logo-wrapper:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
+        }
+
+        .hotel-logo-img {
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
         }
 
         /* Top Luxury Navbar */
@@ -219,13 +243,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-hotel sticky-top py-3">
         <div class="container-xl">
             <!-- Brand -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('dashboard') }}">
-                <div class="bg-warning bg-opacity-25 p-2 rounded-3 border border-warning border-opacity-50 text-warning d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                    <i class="bi bi-buildings-fill fs-5"></i>
+            <a class="navbar-brand d-flex align-items-center gap-2.5" href="{{ route('dashboard') }}">
+                <div class="hotel-logo-wrapper">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel Logo" class="hotel-logo-img" style="width: 44px; height: 44px;">
                 </div>
                 <div>
-                    <span class="fw-bold tracking-tight text-white">GRAND HORIZON</span>
-                    <span class="brand-gold small d-block fw-semibold" style="font-size: 0.68rem; letter-spacing: 1.5px;">LUXURY HOTEL & SUITES</span>
+                    <span class="fw-bold tracking-tight text-white fs-5 font-luxury">ANGKOR HOTEL</span>
+                    <span class="brand-gold small d-block fw-semibold" style="font-size: 0.68rem; letter-spacing: 1.5px;">LUXURY HOSPITALITY</span>
                 </div>
             </a>
 
@@ -345,8 +369,10 @@
     <footer>
         <div class="container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
             <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-buildings text-warning"></i>
-                <span class="fw-semibold text-dark">Grand Horizon Hotel Management System</span>
+                <div class="hotel-logo-wrapper" style="padding: 1px;">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel" class="hotel-logo-img" style="width: 26px; height: 26px;">
+                </div>
+                <span class="fw-semibold text-dark">Angkor Hotel Management System</span>
                 <span class="badge bg-secondary-subtle text-secondary border">Laravel 13 Exam</span>
             </div>
             <div class="text-muted small">

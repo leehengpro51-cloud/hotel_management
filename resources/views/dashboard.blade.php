@@ -8,12 +8,17 @@
     <div class="card-body p-4 p-lg-5 position-relative">
         <div class="row align-items-center">
             <div class="col-lg-8">
-                <span class="badge px-3 py-1.5 rounded-pill mb-3" style="background: rgba(212, 175, 55, 0.2); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.4);">
-                    <i class="bi bi-patch-check-fill me-1"></i> Hotel Operations Active &bull; Laravel 13
-                </span>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="hotel-logo-wrapper" style="padding: 2px;">
+                        <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel" class="hotel-logo-img" style="width: 52px; height: 52px;">
+                    </div>
+                    <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(212, 175, 55, 0.2); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.4);">
+                        <i class="bi bi-patch-check-fill me-1"></i> Angkor Hotel Operations &bull; Laravel 13
+                    </span>
+                </div>
                 <h1 class="display-6 fw-bold mb-2 font-luxury text-white">Welcome back, {{ Auth::user()->name }}!</h1>
                 <p class="text-light opacity-75 mb-4" style="max-width: 650px;">
-                    Grand Horizon Hotel Management System overview. Manage room inventories, track real-time occupancy, coordinate guest reservations, and monitor revenue.
+                    Angkor Hotel Management System overview. Manage room inventories, track real-time occupancy, coordinate guest reservations, and monitor revenue.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                     <a href="{{ route('rooms.create') }}" class="btn btn-gold px-3.5 py-2 rounded-3 d-inline-flex align-items-center gap-2">

@@ -25,16 +25,18 @@
             <!-- Luxury Hotel Header -->
             <div class="p-4 p-md-5 text-white" style="background: linear-gradient(135deg, #07111E 0%, #0B192C 60%, #152B44 100%); border-bottom: 3px solid #D4AF37;">
                 <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-                    <div>
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="bi bi-buildings-fill fs-3 text-warning"></i>
-                            <h3 class="fw-bold mb-0 text-white font-luxury">GRAND HORIZON</h3>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="hotel-logo-wrapper" style="padding: 2px;">
+                            <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel Logo" class="hotel-logo-img" style="width: 60px; height: 60px;">
                         </div>
-                        <div class="text-uppercase small tracking-wider brand-gold">Official Reservation Voucher</div>
+                        <div>
+                            <h3 class="fw-bold mb-0 text-white font-luxury">ANGKOR HOTEL</h3>
+                            <div class="text-uppercase small tracking-wider brand-gold">Official Reservation Voucher</div>
+                        </div>
                     </div>
                     <div class="text-md-end">
                         <div class="badge bg-white bg-opacity-15 border border-white border-opacity-25 px-3 py-2 fs-6">
-                            Booking Reference: <strong>#GH-{{ str_pad($reservation->booking_id, 5, '0', STR_PAD_LEFT) }}</strong>
+                            Booking Reference: <strong>#AH-{{ str_pad($reservation->booking_id, 5, '0', STR_PAD_LEFT) }}</strong>
                         </div>
                         <div class="small text-light opacity-75 mt-1">Issued: {{ $reservation->created_at->format('M d, Y') }}</div>
                     </div>
@@ -132,7 +134,7 @@
                 @endif
 
                 <div class="text-center text-muted small pt-3 border-top">
-                    Thank you for choosing Grand Horizon Luxury Hotel & Suites. For assistance, contact our 24/7 concierge at <a href="mailto:frontdesk@grandhorizon.com" class="text-decoration-none">frontdesk@grandhorizon.com</a>
+                    Thank you for choosing Angkor Hotel & Luxury Suites. For assistance, contact our 24/7 concierge at <a href="mailto:concierge@angkorhotel.com" class="text-decoration-none">concierge@angkorhotel.com</a>
                 </div>
             </div>
         </div>

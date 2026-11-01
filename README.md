@@ -1,4 +1,4 @@
-# 🏨 Grand Horizon - Hotel Management System (Laravel 13)
+# 🏨 Angkor Hotel - Hotel Management System (Laravel 13)
 
 > **SETEC Institute — Final Project Exam Laravel 13**  
 > **Topic 5:** Hotel Management System with Relational Database, Authentication & Advanced CRUD Filter/Search
@@ -6,7 +6,7 @@
 ---
 
 ## 📌 Project Overview
-**Grand Horizon Hotel Management System** is an enterprise-grade hospitality operations web application built on **Laravel 13** and **MySQL**. It provides hotel staff and management with complete room inventory control, room category classification, real-time occupancy tracking, and guest reservation management.
+**Angkor Hotel Management System** is an enterprise-grade hospitality operations web application built on **Laravel 13** and **MySQL**. It features an authentic Angkor Wat gold-crested emblem, providing hotel staff and management with complete room inventory control, room category classification, real-time occupancy tracking, and guest reservation management.
 
 ---
 

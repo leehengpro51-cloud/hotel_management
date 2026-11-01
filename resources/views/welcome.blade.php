@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grand Horizon Hotel & Suites - Hotel Management System</title>
+    <title>Angkor Hotel - Hotel Management System</title>
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/logo.jpg') }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
@@ -20,6 +21,21 @@
         }
         .font-luxury { font-family: 'Playfair Display', Georgia, serif; }
         .brand-gold { color: #D4AF37; }
+        .hotel-logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            border: 3px solid #D4AF37;
+            border-radius: 50%;
+            background: #0B192C;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+        }
+        .hotel-logo-img {
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
         .btn-gold {
             background: linear-gradient(135deg, #E0A96D 0%, #D4AF37 100%);
             border: none;
@@ -36,15 +52,15 @@
     <div class="container py-5">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="bg-warning bg-opacity-20 d-inline-flex p-3 rounded-circle border border-warning border-opacity-40 mb-3">
-                    <i class="bi bi-buildings-fill fs-1 text-warning"></i>
+                <div class="hotel-logo-wrapper mb-4">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Angkor Hotel Logo" class="hotel-logo-img" style="width: 140px; height: 140px;">
                 </div>
-                <h1 class="display-4 fw-bold font-luxury mb-3">GRAND HORIZON</h1>
-                <h4 class="brand-gold tracking-widest text-uppercase mb-4 fw-semibold" style="letter-spacing: 3px;">
-                    Hotel Management System
+                <h1 class="display-3 fw-bold font-luxury mb-2 text-white">ANGKOR HOTEL</h1>
+                <h4 class="brand-gold tracking-widest text-uppercase mb-4 fw-semibold" style="letter-spacing: 4px;">
+                    Luxury Hospitality Management System
                 </h4>
-                <p class="lead text-light opacity-75 mb-5 mx-auto" style="max-width: 600px;">
-                    SETEC Institute &bull; Final Project Exam &bull; Laravel 13 Relational Database System for Hospitality Management.
+                <p class="lead text-light opacity-75 mb-5 mx-auto" style="max-width: 620px;">
+                    SETEC Institute &bull; Final Project Exam &bull; Laravel 13 Relational Database System with Migrations, Seeders & CRUD Operations.
                 </p>
                 <div class="d-flex justify-content-center gap-3 flex-wrap">
                     @auth
