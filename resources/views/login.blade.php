@@ -67,13 +67,6 @@
                         </button>
                     </div>
 
-                    <!-- Default Account Hint -->
-                    <div class="p-3 rounded-3 bg-light border text-muted small mb-3">
-                        <div class="fw-bold text-dark mb-1 d-flex align-items-center gap-1">
-                            <i class="bi bi-info-circle-fill text-warning"></i> Default Staff Account:
-                        </div>
-                        <div>Email: <code>Lyheng@gmail.com</code> | Pass: <code>lyheng123</code></div>
-                    </div>
 
                     <div class="text-center small text-muted">
                         Don't have a staff account? 
