@@ -19,7 +19,8 @@
 | **3** | **Data Seeding** | ✅ Complete | Realistic seeders with 6 luxury categories, 16 hotel rooms, and 7 guest bookings |
 | **4** | **CRUD with Search & Filters** | ✅ Complete | Full Create, Read, Update, Delete with keyword search, category filter, status filter, and floor filter |
 | **5** | **Responsive Luxury Interface** | ✅ Complete | Custom deep navy & gold luxury theme with Bootstrap 5.3 + Bootstrap Icons |
-| **6** | **Database SQL Export** | ✅ Complete | Ready-to-import `hotel_management.sql` for dbForge Studio or phpMyAdmin |
+| **6** | **Staff & User Management** | ✅ Complete | Admin can add, search, edit, and safely remove staff users (with self-delete protection) |
+| **7** | **Database SQL Export** | ✅ Complete | Ready-to-import `hotel_management.sql` for dbForge Studio or phpMyAdmin |
 
 ---
 

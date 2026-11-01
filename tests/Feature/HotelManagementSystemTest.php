@@ -139,4 +139,49 @@ class HotelManagementSystemTest extends TestCase
         $deleteResponse->assertRedirect(route('rooms.index'));
         $this->assertDatabaseMissing('rooms', ['room_id' => $room->room_id]);
     }
+
+    /**
+     * Test admin can view, add, edit, and remove staff users.
+     */
+    public function test_admin_can_add_and_remove_users(): void
+    {
+        $admin = User::factory()->create();
+
+        // 1. View Users Index
+        $indexResponse = $this->actingAs($admin)->get(route('users.index'));
+        $indexResponse->assertStatus(200);
+        $indexResponse->assertSee('Staff & User Management', false);
+
+        // 2. Add New User
+        $userData = [
+            'name' => 'Receptionist Sophea',
+            'email' => 'sophea@gmail.com',
+            'password' => 'password123',
+            'password_confirmation' => 'password123',
+        ];
+        $storeResponse = $this->actingAs($admin)->post(route('users.store'), $userData);
+        $storeResponse->assertRedirect(route('users.index'));
+        $this->assertDatabaseHas('users', ['email' => 'sophea@gmail.com', 'name' => 'Receptionist Sophea']);
+
+        $newUser = User::where('email', 'sophea@gmail.com')->first();
+        $this->assertNotNull($newUser);
+
+        // 3. Edit User
+        $updateResponse = $this->actingAs($admin)->put(route('users.update', $newUser->id), [
+            'name' => 'Receptionist Sophea Updated',
+            'email' => 'sophea.updated@gmail.com',
+        ]);
+        $updateResponse->assertRedirect(route('users.index'));
+        $this->assertDatabaseHas('users', ['email' => 'sophea.updated@gmail.com']);
+
+        // 4. Remove User
+        $deleteResponse = $this->actingAs($admin)->delete(route('users.destroy', $newUser->id));
+        $deleteResponse->assertRedirect(route('users.index'));
+        $this->assertDatabaseMissing('users', ['id' => $newUser->id]);
+
+        // 5. Cannot delete self
+        $selfDeleteResponse = $this->actingAs($admin)->delete(route('users.destroy', $admin->id));
+        $selfDeleteResponse->assertRedirect(route('users.index'));
+        $this->assertDatabaseHas('users', ['id' => $admin->id]);
+    }
 }

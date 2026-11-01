@@ -30,6 +30,9 @@
                     <a href="{{ route('room-types.create') }}" class="btn btn-outline-light px-3.5 py-2 rounded-3 d-inline-flex align-items-center gap-2">
                         <i class="bi bi-grid-fill"></i> New Room Type
                     </a>
+                    <a href="{{ route('users.index') }}" class="btn btn-outline-light px-3.5 py-2 rounded-3 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-people-fill text-warning"></i> Manage Staff
+                    </a>
                 </div>
             </div>
             <div class="col-lg-4 text-center d-none d-lg-block">

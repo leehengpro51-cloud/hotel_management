@@ -282,6 +282,11 @@
                             <i class="bi bi-calendar-check me-1"></i> Bookings
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{ route('users.index') }}">
+                            <i class="bi bi-people me-1"></i> Users
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- User Profile & Logout -->
@@ -298,6 +303,17 @@
                                 <div class="fw-bold small text-dark">{{ Auth::user()->name }}</div>
                                 <div class="text-muted" style="font-size: 0.75rem;">{{ Auth::user()->email }}</div>
                             </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-dark" href="{{ route('users.index') }}">
+                                    <i class="bi bi-people-fill text-primary"></i> Manage Staff Users
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-dark" href="{{ route('users.create') }}">
+                                    <i class="bi bi-person-plus-fill text-warning"></i> Add New User
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider my-1"></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="POST" class="m-0">
                                     @csrf

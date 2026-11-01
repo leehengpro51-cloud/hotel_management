@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomTypeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,4 +40,7 @@ Route::middleware('auth')->group(function () {
     // Guest Bookings & Reservations
     Route::resource('reservations', ReservationController::class);
     Route::resource('bookings', ReservationController::class); // Friendly alias
+
+    // Staff & User Management (Add / Remove Users)
+    Route::resource('users', UserController::class);
 });
